@@ -40,6 +40,49 @@ http://localhost:5173
 ```
 
 
+## 🏗️ Tech Stack
+
+| Component | Technology |
+| :--- | :--- |
+| **Frontend** | React + Vite + Tailwind CSS |
+| **Backend** | FastAPI + Python |
+| **Vector DB** | Qdrant |
+| **AI Model** | OpenAI `gpt-4o-mini` & `text-embedding-3-small` |
+| **Deployment** | Vercel (Frontend) + Render (Backend) |
+| **Containerization**| Docker |
+
+---
+
+## 🌐 Live Demo
+
+* **Frontend:** https://rag-agent-p72x.vercel.app/
+* **Backend:** https://rag-agent-backend-ev0o.onrender.com/
+* **GitHub Repository:** (https://github.com/shashankkumar8/rag-agent)
+
+---
+
+## ⚙️ Setup & Configuration
+
+### Environment Variables
+Create a file named `.env` inside your `backend/` directory and add the following keys:
+
+```env
+OPENAI_API_KEY=your-openai-key-here
+QDRANT_URL=http://qdrant:6333
+QDRANT_COLLECTION=docs
+EMBEDDING_MODEL=text-embedding-3-small
+LLM_MODEL=gpt-4o-mini
+MAX_K=5
+
+
+
+
+Method,Endpoint,Description
+GET,/health,Health check to verify backend status
+POST,/api/ingest,Upload and process documents into chunks
+POST,/api/chat,Chat with the RAG agent with streaming responses
+
+
 
 📬 Contact
 GitHub: https://github.com/shashankkumar8/
